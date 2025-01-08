@@ -17,7 +17,7 @@ def driver(request):
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
     driver = webdriver.Chrome(service=driver_service, options=options)  # Chrome browser
-    driver.implicitly_wait(60)
+    driver.implicitly_wait(10)
     driver.maximize_window()  # open full screen
     yield driver
     driver.quit()  # close browser
